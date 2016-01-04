@@ -1,0 +1,38 @@
+.courseInfo {
+
+  > .title {
+
+    > div > .description {
+      font-size: 18px;
+      color: black;
+      margin: 30px 0;
+    }
+
+  }
+
+}
+
+.section {
+
+  > div {
+    font-size: 16px;
+    margin-top: 25px;
+  }
+
+}
+
+.form-group {
+
+  > label {
+    line-height: 34px;
+  }
+
+  > .form-control {
+    width: 80%;
+  }
+
+}
+
+textarea {
+  width: 50%;
+}

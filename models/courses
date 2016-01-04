@@ -1,0 +1,25 @@
+// grab the packages that we need for the user model
+var mongoose = require('mongoose');
+var Schema = mongoose.Schema;
+var uniqueValidator = require('mongoose-unique-validator');
+// user schema
+var CoursesSchema
+    = new Schema({
+    title: { type: String, required: true, unique: true },
+    description: { type: String, required: true },
+    author: String,
+    chapters: [{
+        cName: String,
+        lection: String,
+        practice: String,
+        test: String,
+        result: Number
+    }],
+    dataPublished: String,
+    dataChanged: String,
+    totalResult: Number
+});
+// Unique check
+CoursesSchema.plugin(uniqueValidator);
+// return the model
+module.exports = mongoose.model('Courses', CoursesSchema);
