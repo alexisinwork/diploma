@@ -45,6 +45,12 @@ export class Main extends Component {
                         <li>{course.title === 'robotics' && 'Робототехника'}</li>
                     </Link>)
                 )}
+              <li>Нанотехнологии</li>
+              <li>Программирование на Javascript</li>
+              <li>Веб-технологии</li>
+              <li>Психология</li>
+              <li>Экономика</li>
+              <li>Математика</li>
             </ul>
         )
     }
@@ -65,6 +71,54 @@ export class Main extends Component {
                         </Link>
                     </div>
                 ))}
+              <div className="course -example">
+                <h2>Нанотехнологии<small> создается Alena</small></h2>
+                <div className="published">Опубликован: Не опубликован</div>
+                <div>Обновлен: Не обновлен</div>
+                <p>Данный курс предназначен для тех, кто владеет основной информацией по теории и
+                  планирует научиться использовать знания на практике.</p>
+                <li className="button disabled">Перейти к курсу</li>
+              </div>
+              <div className="course -example">
+                <h2>Программирование на Javascript<small> создается Alex</small></h2>
+                <div className="published">Опубликован: Не опубликован</div>
+                <div>Обновлен: Не обновлен</div>
+                <p>Данный курс предназначен для тех, кто владеет основной информацией по теории и
+                  планирует научиться использовать знания на практике.</p>
+                <li className="button disabled">Перейти к курсу</li>
+              </div>
+              <div className="course -example">
+                <h2>Веб-технологии<small> создается Maylo</small></h2>
+                <div className="published">Опубликован: Не опубликован</div>
+                <div>Обновлен: Не обновлен</div>
+                <p>Данный курс предназначен для тех, кто владеет основной информацией по теории и
+                  планирует научиться использовать знания на практике.</p>
+                <li className="button disabled">Перейти к курсу</li>
+              </div>
+              <div className="course -example">
+                <h2>Психология<small> создается Merimor</small></h2>
+                <div className="published">Опубликован: Не опубликован</div>
+                <div>Обновлен: Не обновлен</div>
+                <p>Данный курс предназначен для тех, кто владеет основной информацией по теории и
+                  планирует научиться использовать знания на практике.</p>
+                <li className="button disabled">Перейти к курсу</li>
+              </div>
+              <div className="course -example">
+                <h2>Экономика<small> создается Alena</small></h2>
+                <div className="published">Опубликован: Не опубликован</div>
+                <div>Обновлен: Не обновлен</div>
+                <p>Данный курс предназначен для тех, кто владеет основной информацией по теории и
+                  планирует научиться использовать знания на практике.</p>
+                <li className="button disabled">Перейти к курсу</li>
+              </div>
+              <div className="course -example">
+                <h2>Математика<small> создается Sherlock</small></h2>
+                <div className="published">Опубликован: Не опубликован</div>
+                <div>Обновлен: Не обновлен</div>
+                <p>Данный курс предназначен для тех, кто владеет основной информацией по теории и
+                  планирует научиться использовать знания на практике.</p>
+                <li className="button disabled">Перейти к курсу</li>
+              </div>
             </ul>
         )
     }
@@ -139,21 +193,21 @@ export class Main extends Component {
                               <div className="modal-content">
                                 <div className="modal-header">
                                   <button type="button" className="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                  <h4 className="modal-title" id="myModalLabel">Log in</h4>
+                                  <h4 className="modal-title" id="myModalLabel">Войти</h4>
                                 </div>
                                 <div className="modal-body">
                                   <div className="form-group">
-                                    <label htmlFor="exampleInputEmail1">Username:</label>
+                                    <label htmlFor="exampleInputEmail1">Логин:</label>
                                     <input ref="usernameLog" type="text" className="pull-right form-control" id="exampleInputEmail1" placeholder="Username" />
                                   </div>
                                   <div className="form-group">
-                                    <label htmlFor="exampleInputPassword1">Password:</label>
+                                    <label htmlFor="exampleInputPassword1">Пароль:</label>
                                     <input ref="passwordLog" type="password" className="pull-right form-control" id="exampleInputPassword1" placeholder="Password" />
                                   </div>
                                 </div>
                                 <div className="modal-footer">
-                                  <button type="button" className="btn btn-default" data-dismiss="modal">Close</button>
-                                  <button type="button" className="btn btn-primary" onClick={this.login.bind(this)}>Log In</button>
+                                  <button type="button" className="btn btn-default" data-dismiss="modal">Отмена</button>
+                                  <button type="button" className="btn btn-primary" onClick={this.login.bind(this)}>Войти</button>
                                 </div>
                               </div>
                             </div>
@@ -164,25 +218,25 @@ export class Main extends Component {
                                   <div className="modal-content">
                                       <div className="modal-header">
                                           <button type="button" className="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                          <h4 className="modal-title" id="myModalLabel">Sign in</h4>
+                                          <h4 className="modal-title" id="myModalLabel">Зарегистрироваться</h4>
                                       </div>
                                       <div className="modal-body">
                                         <div className="form-group">
-                                          <label htmlFor="exampleInputEmail2">Username:</label>
+                                          <label htmlFor="exampleInputEmail2">Логин:</label>
                                           <input ref="usernameSign" type="text" className="pull-right form-control" id="exampleInputEmail2" placeholder="Username" />
                                         </div>
                                         <div className="form-group">
-                                          <label htmlFor="exampleInputPassword2">Password:</label>
+                                          <label htmlFor="exampleInputPassword2">Пароль:</label>
                                           <input ref="passwordSign" type="password" className="pull-right form-control" id="exampleInputPassword2" placeholder="Password" />
                                         </div>
                                         <div className="form-group">
-                                          <label htmlFor="exampleInputName2">Name:</label>
+                                          <label htmlFor="exampleInputName2">Имя:</label>
                                           <input ref="nameSign" type="text" className="pull-right form-control" id="exampleInputName2" placeholder="Name" />
                                         </div>
                                       </div>
                                       <div className="modal-footer">
-                                          <button type="button" className="btn btn-default" data-dismiss="modal">Close</button>
-                                          <button type="button" className="btn btn-primary" onClick={::this.creatingUser}>Save changes</button>
+                                          <button type="button" className="btn btn-default" data-dismiss="modal">Отмена</button>
+                                          <button type="button" className="btn btn-primary" onClick={::this.creatingUser}>Зарегистрироваться</button>
                                       </div>
                                   </div>
                               </div>

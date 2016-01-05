@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Diploma
 
 This is the entire code repository for the 

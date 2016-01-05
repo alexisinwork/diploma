@@ -82,6 +82,9 @@ export default class Section extends Component {
       $(this).attr('disabled', 'disabled');
     });
     this.setState({ isOpen: true });
+    $('html, body').animate({
+      scrollTop: $('#answers').offset().top
+    }, 10);
   }
 
   renderInfo(c, s){
@@ -155,17 +158,19 @@ export default class Section extends Component {
     return (<div>
       <h2>{this.renderInfo(chapter[0].cName, params.section)}</h2>
       <div className="description" dangerouslySetInnerHTML={{__html: chapter[0][params.section]}} />
-      {this.state.isOpen && <div>
-        <p>Результати:</p>
-        <textarea>
-          Навчився вкючати блок, ставити гучність динаміків, вивчив різні варіанти автовключення. Навчився видаляти та створювати профілі.
-          Вивчив спливаючі підказки блоків палітри 'Common'. Створив нову програму Eyes, в якій на екрані NXT будуть зображені очі, що дивляться наліво-направо.
-        </textarea>
-        <p>Висновки:</p>
-        <textarea>
-          Система NXT легка у користуванні та ефективна для рішення задач по робототехніці.
-        </textarea>
-      </div>}
+      <div id="answers">
+        {this.state.isOpen && <span>
+          <p>Результати:</p>
+          <textarea>
+            Навчився вкючати блок, ставити гучність динаміків, вивчив різні варіанти автовключення. Навчився видаляти та створювати профілі.
+            Вивчив спливаючі підказки блоків палітри 'Common'. Створив нову програму Eyes, в якій на екрані NXT будуть зображені очі, що дивляться наліво-направо.
+          </textarea>
+          <p>Висновки:</p>
+          <textarea>
+            Система NXT легка у користуванні та ефективна для рішення задач по робототехніці.
+          </textarea>
+        </span>}
+      </div>
       {<a href="#" className="button pull-right"
           onClick={this.nextSection.bind(this, params.section, course.chapters, nextCourseName, chapter)}>{params.section !== 'test' ? 'Дальше' : 'Показать результат'}</a>
       }

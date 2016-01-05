@@ -36,3 +36,15 @@
 textarea {
   width: 50%;
 }
+
+.button {
+  &.disabled {
+    background-color: lightgray;
+  }
+}
+
+.course {
+  &.-example {
+    margin-top: 25px;
+  }
+}
