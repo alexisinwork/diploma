@@ -1,1 +1,1 @@
-web: webpack-dev-server --history-api-fallback --hot --colors && nodejs ./bin/www
+web: npm install && npm start
