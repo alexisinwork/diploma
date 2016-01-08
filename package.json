@@ -7,8 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "webpack-server": "webpack-dev-server --history-api-fallback --hot --colors",
     "web-server": "node ./bin/www",
-    "start": "npm run webpack-server & npm run web-server",
-    "postinstall": "npm install && npm start"
+    "start": "npm run webpack-server & npm run web-server"
   },
   "author": "Alex",
   "devDependencies": {
