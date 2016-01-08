@@ -35,10 +35,6 @@ export default class Course extends Component {
     this.props.dispatch(fetchCourses());
   }
 
-  checkAnswer (){
-
-  }
-
   renderChapter(name) {
     var ruName = '';
     switch (name){
