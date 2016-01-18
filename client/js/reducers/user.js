@@ -7,11 +7,14 @@ const ADD_USER = "ADD_USER";
 const LOGOUT_USER = "LOGOUT_USER";
 
 // Reducers
-const initialState = {};
+const initialState = {
+  error: null
+};
 
 export default createReducer(initialState, {
   [LOGINING_USER]: () => ({
-    isLoading: true
+    isLoading: true,
+    error: null
   }),
   [LOGIN_USER_SUCCESS]: (state, { data: { user } }) => ({
     username: user.username,
@@ -24,7 +27,7 @@ export default createReducer(initialState, {
   }),
   [LOGOUT_USER]: () => ({
     username: '',
-    firstname: '',
+    firstname: ''
   }),
   [ADD_USER]: (state, { data: { user } }) => ({
     username: state.username,
@@ -71,7 +74,6 @@ export function addUser(user) {
 export function checkUser(user) {
   return dispatch => {
     dispatch(logining());
-    console.log(user.username, user.password);
     $.ajax({
       type: 'POST',
       data: {
@@ -80,7 +82,11 @@ export function checkUser(user) {
       },
       url: 'http://localhost:3000/api/user/login',
       success: function(json) {
-        dispatch(loginUserSuccess(json.user));
+        if (!json.user) {
+          dispatch(loginUserFailed(json));
+        } else {
+          dispatch(loginUserSuccess(json.user));
+        }
       },
       error: function(e) {
         dispatch(loginUserFailed(e));
@@ -92,20 +98,25 @@ export function checkUser(user) {
 export function createNewUser(user) {
   return dispatch => {
     dispatch(logining());
-    $.ajax({
-      type: 'POST',
-      data: {
-        "username": user.username,
-        "password": user.password,
-        "firstname": user.firstname
-      },
-      url: 'http://localhost:3000/api/user/register',
-      success: function(json) {
-        dispatch(loginUserSuccess(json.user));
-      },
-      error: function(e) {
-        dispatch(loginUserFailed(e));
-      }
-    });
+    console.log(user);
+    if (!user) {
+      dispatch(loginUserFailed('No such user'));
+    } else {
+      $.ajax({
+        type: 'POST',
+        data: {
+          "username": user.username,
+          "password": user.password,
+          "firstname": user.firstname
+        },
+        url: 'http://localhost:3000/api/user/register',
+        success: function(json) {
+          dispatch(loginUserSuccess(json.user));
+        },
+        error: function(e) {
+          dispatch(loginUserFailed(e));
+        }
+      });
+    }
   }
 }

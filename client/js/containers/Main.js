@@ -1,7 +1,7 @@
 import React, {Component, PropTypes} from 'react'
 import {Link, IndexLink} from 'react-router'
 import { connect } from 'react-redux';
-import { checkUser, createNewUser, currentUser, logOut } from '../reducers/user';
+import { checkUser, createNewUser, logOut } from '../reducers/user';
 import { fetchCourses } from '../reducers/courses';
 import { capitalize } from '../utils';
 
@@ -146,7 +146,11 @@ export class Main extends Component {
 
     render() {
       const { sidebar, user } = this.props;
-      // TODO: Change to React-style
+
+      if (user.error && user.error.message) {
+        alert(user.error.message);
+      }
+
       user.username && $('#myModalLogin').modal('hide') || $('#myModalSignin').modal('hide');
       if (!user.isLoading && user.username) {
         if (this.refs.usernameLog.value){
