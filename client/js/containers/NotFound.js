@@ -8,13 +8,13 @@ class NotFound extends Component {
           <div id="page">
             <div id="content">
               <div className="title">
-                <h2>Sorry, but we haven't page like this!</h2>
+                <h2>Извините, но такой страницы у нас нету!</h2>
                 <br />
-              <p>This is <strong>Al Courses</strong>, a free, fully standards-compliant website for
-                passing online-courses designed by <a href="https://ua.linkedin.com/in/alexkuhtin" rel="nofollow">Alex Kuhtin</a>.
-                On this website you can check in left panel all available courses and pass it by clicking on it.</p>
+              <p>Это сайт <strong>Al Courses</strong>, бесплатная система для прохождения курсов, созданная
+                <a href="https://ua.linkedin.com/in/alexkuhtin" rel="nofollow">Alex Kuhtin</a>.
+                На этом сайте вы можете проверить доступные курсы и пройти их.</p>
                 <br />
-              <a href="/courses" className="button">Back to courses page</a>
+              <a href="/courses" className="button">Вернуться на главную</a>
               </div>
             </div>
           </div>

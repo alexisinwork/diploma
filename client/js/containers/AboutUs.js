@@ -7,7 +7,7 @@ class AboutUs extends Component {
             <div id="header-featured-about"></div>
             <div id="banner-wrapper">
                 <div id="banner" className="container">
-                <h2>Здесь мы расскажем вам кое-что о нас</h2>
+                <h2>Мы расскажем вам кое-что о нас</h2>
             <span>Вы найдете здесь информацию о наших курсах</span>
             </div>
             </div>

@@ -7,7 +7,7 @@ class Contacts extends Component {
                 <div id="header-featured-contacts"></div>
                 <div id="banner-wrapper">
                     <div id="banner" className="container">
-                        <h2>Здесь найдете все возможные способы связи с нами</h2>
+                        <h2>Все возможные способы связи с нами</h2>
                         <span>Ниже вы можете прочесть всю необходимую информацию</span>
                     </div>
                 </div>

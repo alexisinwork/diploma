@@ -254,7 +254,7 @@ export class Main extends Component {
                     <div id="header-featured"></div>
                     <div id="banner-wrapper">
                         <div id="banner" className="container">
-                            <h2>Здесь вы найдете бесплатные онлайн курсы созданные для вашего успеха</h2>
+                            <h2>Бесплатные онлайн курсы созданные для вашего успеха</h2>
                             <span>На этом сайте вы можете создавать курсы для всех, а также проходить курсы других</span>
                         </div>
                     </div>
@@ -269,7 +269,7 @@ export class Main extends Component {
                                 <div id="content">
                                     <div className="title">
                                         <h2>Доступные курсы</h2>
-                                        <span className="byline">Здесь вы можете выбрать курс и пройти его!</span> </div>
+                                        <span className="byline">Выбирайте курс и проходите его!</span> </div>
                                         {this.renderCourses()}
                                 </div>
                             </div>

@@ -77,7 +77,7 @@ export default class Course extends Component {
       <div>
         <div id="banner-wrapper">
           <div id="banner" className="container">
-             <h2>Здесь вы увидите всю информацию по курсу</h2>
+             <h2>Вся информация по курсу</h2>
                <span>На этой странице вы будете проходить ваш курс</span>
              </div>
           </div>
