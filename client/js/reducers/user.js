@@ -98,7 +98,6 @@ export function checkUser(user) {
 export function createNewUser(user) {
   return dispatch => {
     dispatch(logining());
-    console.log(user);
     if (!user) {
       dispatch(loginUserFailed('No such user'));
     } else {
