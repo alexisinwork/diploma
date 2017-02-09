@@ -7,17 +7,17 @@ class AboutUs extends Component {
             <div id="header-featured-about"></div>
             <div id="banner-wrapper">
                 <div id="banner" className="container">
-                <h2>Мы расскажем вам кое-что о нас</h2>
-            <span>Вы найдете здесь информацию о наших курсах</span>
+                <h2>We want to tell you something about us</h2>
+            <span>You will find here info about us</span>
             </div>
             </div>
 
             <div id="wrapper">
                 <div id="page">
                     <div id="content" className="-left-margined">
-                        <p>Это <strong>Al Courses</strong>, свободный, полностью соответствующий стандартам веб-сайт для прохождения онлайн-курсов,
-                          разработанный <a href="https://ua.linkedin.com/in/alexkuhtin" rel="nofollow">ALEX KUHTIN</a>.
-                          На этом сайте вы можете проверить в левой панели на странице "Курсы" все доступные курсы и пройти его, нажав на нее.</p>
+                        <p>This is <strong>Al Courses</strong>, free, definitely standart website to test your skills,
+                          developed by <a href="https://ua.linkedin.com/in/alexkuhtin" rel="nofollow">Alex Kukhtin</a>.
+                          On left panel you can see "Courses" and pass it bt clicking on it.</p>
                     </div>
                 </div>
             </div>

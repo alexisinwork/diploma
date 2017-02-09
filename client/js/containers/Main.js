@@ -42,15 +42,13 @@ export class Main extends Component {
             <ul>
                 {courses.map(course => (
                     <Link to={`/courses/${course.title}`} key={course.title}>
-                        <li>{course.title === 'robotics' && 'Робототехника'}</li>
+                        <li>{course.title === 'robotics' && 'Robotics'}</li>
                     </Link>)
                 )}
-              <li>Нанотехнологии</li>
-              <li>Программирование на Javascript</li>
-              <li>Веб-технологии</li>
-              <li>Психология</li>
-              <li>Экономика</li>
-              <li>Математика</li>
+              <li>Nanotchnology</li>
+              <li>Javascript programming</li>
+              <li>Web</li>
+              <li>Math</li>
             </ul>
         )
     }
@@ -61,63 +59,43 @@ export class Main extends Component {
             <ul>
                 {courses.map(course => (
                     <div key={course._id} className="course">
-                        <h2>{course.title === 'robotics' && 'Робототехника'}<small> создан {course.author}</small></h2>
-                        <div className="published">Опубликован: {course.dataPublished}</div>
-                        <div>Обновлен: {course.dataChanged}</div>
+                        <h2>{course.title === 'robotics' && 'Robotics'}<small> created by {course.author}</small></h2>
+                        <div className="published">Published: {course.dataPublished}</div>
+                        <div>Updated: {course.dataChanged}</div>
                         <p>{capitalize(course.description)}</p>
                         <Link to={`/courses/${course.title}`}
                               key={course.title} className="button -describe">
-                            <li>Перейти к курсу</li>
+                            <li>Go to course</li>
                         </Link>
                     </div>
                 ))}
               <div className="course -example">
-                <h2>Нанотехнологии<small> создается Alena</small></h2>
-                <div className="published">Опубликован: Не опубликован</div>
-                <div>Обновлен: Не обновлен</div>
-                <p>Данный курс предназначен для тех, кто владеет основной информацией по теории и
-                  планирует научиться использовать знания на практике.</p>
-                <li className="button disabled">Перейти к курсу</li>
+                <h2>Nanotechnology<small> creating by Admin</small></h2>
+                <div className="published">Published: No</div>
+                <div>Updated: No</div>
+                <p>Course for somebody who want to check nano-skills.</p>
+                <li className="button disabled">Go to course</li>
               </div>
               <div className="course -example">
-                <h2>Программирование на Javascript<small> создается Alex</small></h2>
-                <div className="published">Опубликован: Не опубликован</div>
-                <div>Обновлен: Не обновлен</div>
-                <p>Данный курс предназначен для тех, кто владеет основной информацией по теории и
-                  планирует научиться использовать знания на практике.</p>
-                <li className="button disabled">Перейти к курсу</li>
+                <h2>Javascript programming<small> creating by Admin</small></h2>
+                <div className="published">Published: No</div>
+                <div>Updated: No</div>
+                <p>Course for somebody who want to check js-skills.</p>
+                <li className="button disabled">Go to course</li>
               </div>
               <div className="course -example">
-                <h2>Веб-технологии<small> создается Maylo</small></h2>
-                <div className="published">Опубликован: Не опубликован</div>
-                <div>Обновлен: Не обновлен</div>
-                <p>Данный курс предназначен для тех, кто владеет основной информацией по теории и
-                  планирует научиться использовать знания на практике.</p>
-                <li className="button disabled">Перейти к курсу</li>
+                <h2>Web<small> creating by Admin</small></h2>
+                <div className="published">Published: No</div>
+                <div>Updated: No</div>
+                <p>Course for somebody who want to check web-skills.</p>
+                <li className="button disabled">Go to course</li>
               </div>
               <div className="course -example">
-                <h2>Психология<small> создается Merimor</small></h2>
-                <div className="published">Опубликован: Не опубликован</div>
-                <div>Обновлен: Не обновлен</div>
-                <p>Данный курс предназначен для тех, кто владеет основной информацией по теории и
-                  планирует научиться использовать знания на практике.</p>
-                <li className="button disabled">Перейти к курсу</li>
-              </div>
-              <div className="course -example">
-                <h2>Экономика<small> создается Alena</small></h2>
-                <div className="published">Опубликован: Не опубликован</div>
-                <div>Обновлен: Не обновлен</div>
-                <p>Данный курс предназначен для тех, кто владеет основной информацией по теории и
-                  планирует научиться использовать знания на практике.</p>
-                <li className="button disabled">Перейти к курсу</li>
-              </div>
-              <div className="course -example">
-                <h2>Математика<small> создается Sherlock</small></h2>
-                <div className="published">Опубликован: Не опубликован</div>
-                <div>Обновлен: Не обновлен</div>
-                <p>Данный курс предназначен для тех, кто владеет основной информацией по теории и
-                  планирует научиться использовать знания на практике.</p>
-                <li className="button disabled">Перейти к курсу</li>
+                <h2>Math<small> creating by Admin</small></h2>
+                <div className="published">Published: No</div>
+                <div>Updated: No</div>
+                <p>Course for somebody who want to check math-skills.</p>
+                <li className="button disabled">Go to course</li>
               </div>
             </ul>
         )
@@ -177,19 +155,19 @@ export class Main extends Component {
                         </div>
                         <div id="menu">
                             <ul>
-                                <li><IndexLink to="/courses" activeClassName="current_page_item">Курсы</IndexLink></li>
-                                <li><Link to="/about" activeClassName="current_page_item">О нас</Link></li>
-                                <li><Link to="/reviews" activeClassName="current_page_item">Отзывы</Link></li>
-                                <li><Link to="/contacts" activeClassName="current_page_item">Контакты</Link></li>
+                                <li><IndexLink to="/courses" activeClassName="current_page_item">Courses</IndexLink></li>
+                                <li><Link to="/about" activeClassName="current_page_item">About Us</Link></li>
+                                <li><Link to="/reviews" activeClassName="current_page_item">Reviews</Link></li>
+                                <li><Link to="/contacts" activeClassName="current_page_item">Contacts</Link></li>
                             </ul>
                         </div>
                         <div id="login">
                           {!user.username ? <ul>
-                              <li><a href="" data-toggle="modal" data-target="#myModalLogin" >Войти</a></li>
-                              <li><a href="" data-toggle="modal" data-target="#myModalSignin">Зарегистрироваться</a></li>
+                              <li><a href="" data-toggle="modal" data-target="#myModalLogin" >Login</a></li>
+                              <li><a href="" data-toggle="modal" data-target="#myModalSignin">Register</a></li>
                           </ul> : <ul>
-                            <li><a href="#">Привет, {user.firstname}</a></li>
-                            <li><IndexLink to="/courses" activeClassName="current_page_item" onClick={this.logOut.bind(this)}>Выйти</IndexLink></li>
+                            <li><a href="#">Hi, {user.firstname}</a></li>
+                            <li><IndexLink to="/courses" activeClassName="current_page_item" onClick={this.logOut.bind(this)}>Log out</IndexLink></li>
                           </ul>}
 
                           <div className="modal fade" id="myModalLogin" role="dialog" aria-labelledby="myModalLabel">
@@ -197,21 +175,21 @@ export class Main extends Component {
                               <div className="modal-content">
                                 <div className="modal-header">
                                   <button type="button" className="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                  <h4 className="modal-title" id="myModalLabel">Войти</h4>
+                                  <h4 className="modal-title" id="myModalLabel">Login</h4>
                                 </div>
                                 <div className="modal-body">
                                   <div className="form-group">
-                                    <label htmlFor="exampleInputEmail1">Логин:</label>
+                                    <label htmlFor="exampleInputEmail1">Username:</label>
                                     <input ref="usernameLog" type="text" className="pull-right form-control" id="exampleInputEmail1" placeholder="Username" />
                                   </div>
                                   <div className="form-group">
-                                    <label htmlFor="exampleInputPassword1">Пароль:</label>
+                                    <label htmlFor="exampleInputPassword1">Password:</label>
                                     <input ref="passwordLog" type="password" className="pull-right form-control" id="exampleInputPassword1" placeholder="Password" />
                                   </div>
                                 </div>
                                 <div className="modal-footer">
-                                  <button type="button" className="btn btn-default" data-dismiss="modal">Отмена</button>
-                                  <button type="button" className="btn btn-primary" onClick={this.login.bind(this)}>Войти</button>
+                                  <button type="button" className="btn btn-default" data-dismiss="modal">Cancel</button>
+                                  <button type="button" className="btn btn-primary" onClick={this.login.bind(this)}>Login</button>
                                 </div>
                               </div>
                             </div>
@@ -222,25 +200,25 @@ export class Main extends Component {
                                   <div className="modal-content">
                                       <div className="modal-header">
                                           <button type="button" className="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                          <h4 className="modal-title" id="myModalLabel">Зарегистрироваться</h4>
+                                          <h4 className="modal-title" id="myModalLabel">Register</h4>
                                       </div>
                                       <div className="modal-body">
                                         <div className="form-group">
-                                          <label htmlFor="exampleInputEmail2">Логин:</label>
+                                          <label htmlFor="exampleInputEmail2">Username:</label>
                                           <input ref="usernameSign" type="text" className="pull-right form-control" id="exampleInputEmail2" placeholder="Username" />
                                         </div>
                                         <div className="form-group">
-                                          <label htmlFor="exampleInputPassword2">Пароль:</label>
+                                          <label htmlFor="exampleInputPassword2">Password:</label>
                                           <input ref="passwordSign" type="password" className="pull-right form-control" id="exampleInputPassword2" placeholder="Password" />
                                         </div>
                                         <div className="form-group">
-                                          <label htmlFor="exampleInputName2">Имя:</label>
+                                          <label htmlFor="exampleInputName2">Name:</label>
                                           <input ref="nameSign" type="text" className="pull-right form-control" id="exampleInputName2" placeholder="Name" />
                                         </div>
                                       </div>
                                       <div className="modal-footer">
-                                          <button type="button" className="btn btn-default" data-dismiss="modal">Отмена</button>
-                                          <button type="button" className="btn btn-primary" onClick={::this.creatingUser}>Зарегистрироваться</button>
+                                          <button type="button" className="btn btn-default" data-dismiss="modal">Cancel</button>
+                                          <button type="button" className="btn btn-primary" onClick={::this.creatingUser}>Register</button>
                                       </div>
                                   </div>
                               </div>
@@ -254,8 +232,8 @@ export class Main extends Component {
                     <div id="header-featured"></div>
                     <div id="banner-wrapper">
                         <div id="banner" className="container">
-                            <h2>Бесплатные онлайн курсы созданные для вашего успеха</h2>
-                            <span>На этом сайте вы можете создавать курсы для всех, а также проходить курсы других</span>
+                            <h2>Free courses created for your success</h2>
+                            <span>On this website later on you will be able to create courses for everybody</span>
                         </div>
                     </div>
 
@@ -263,13 +241,13 @@ export class Main extends Component {
                         <div id="page">
                             <div>
                                 <div id="courses">
-                                    <p>Курсы</p>
+                                    <p>Courses</p>
                                     {this.renderCoursesTitles()}
                                 </div>
                                 <div id="content">
                                     <div className="title">
-                                        <h2>Доступные курсы</h2>
-                                        <span className="byline">Выбирайте курс и проходите его!</span> </div>
+                                        <h2>Available courses</h2>
+                                        <span className="byline">Choose course and start your test</span> </div>
                                         {this.renderCourses()}
                                 </div>
                             </div>
@@ -278,7 +256,7 @@ export class Main extends Component {
                 </div>}
 
                 <div id="copyright" className="container">
-                    <p>Copyright &copy; 2016. All rights reserved. | Photos by <a href="http://google.com/">Google</a> |
+                    <p>Copyright &copy; 2016. All rights reserved. | Photos by <a href="http://google.com/">Google Images</a> |
                         Design by <a href="http://templated.co" rel="nofollow">TEMPLATED</a> &
                         <a href="https://github.com/alexisinwork" rel="nofollow"> Alex Kuhtin</a>.</p>
                 </div>

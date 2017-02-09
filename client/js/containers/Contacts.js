@@ -7,16 +7,16 @@ class Contacts extends Component {
                 <div id="header-featured-contacts"></div>
                 <div id="banner-wrapper">
                     <div id="banner" className="container">
-                        <h2>Все возможные способы связи с нами</h2>
-                        <span>Ниже вы можете прочесть всю необходимую информацию</span>
+                        <h2>All existing ways to contact us</h2>
+                        <span>All relevant info about us</span>
                     </div>
                 </div>
 
                 <div id="wrapper">
                     <div id="page">
                         <div id="content" className="-left-margined">
-                          <p><b>Телефон:</b> +38 (063) 155-13-24</p>
-                          <p><b>Почта:</b> alexkuhtin1995@gmail.com</p>
+                          <p><b>Phone:</b> +38 (063) 155-13-24</p>
+                          <p><b>Email:</b> alexkuhtin1995@gmail.com</p>
                           <p><b>Skype:</b> alex_kuhtin</p>
                           <p><b>LinkedIn:</b> <a href="https://ua.linkedin.com/in/alexkuhtin">alexkuhtin</a></p>
                           <p><b>Github:</b> <a href="https://github.com/alexisinwork">alexkuhtin</a></p>

@@ -39,31 +39,31 @@ export default class Course extends Component {
     var ruName = '';
     switch (name){
       case 'Chapter1':
-        ruName = 'Обзор';
+        ruName = 'Overview';
         break;
       case 'Chapter2':
-        ruName = 'Программирование моторов: команда Move';
+        ruName = 'Motor programming: command Move';
         break;
       case 'Chapter3':
-        ruName = 'Состояния и события. Сенсоры';
+        ruName = 'States and events. Sensors';
         break;
       case 'Chapter4':
-        ruName = 'Циклы';
+        ruName = 'Loops';
         break;
       case 'Chapter5':
-        ruName = 'Ветвление в NXT-G';
+        ruName = 'Branches in NXT-G';
         break;
       case 'Chapter6':
-        ruName = 'Создание собственных блоков. Подпрограммы: My block';
+        ruName = 'Creating your custom elements. Sub commands: My block';
         break;
       case 'Chapter7':
-        ruName = 'Переменные и константы';
+        ruName = 'Variables and constants';
         break;
       case 'Chapter8':
-        ruName = 'Потоки';
+        ruName = 'Flows';
         break;
       case 'Chapter9':
-        ruName = 'Управление движением робота при помощи системы с отрицательной обратной связью';
+        ruName = 'Manage robot movements';
         break;
     }
     return ruName;
@@ -77,8 +77,8 @@ export default class Course extends Component {
       <div>
         <div id="banner-wrapper">
           <div id="banner" className="container">
-             <h2>Вся информация по курсу</h2>
-               <span>На этой странице вы будете проходить ваш курс</span>
+             <h2>All info about course</h2>
+               <span>You will pass this course here</span>
              </div>
           </div>
 
@@ -90,23 +90,23 @@ export default class Course extends Component {
                   <ul>
                     <Link to={`/courses/${course.title}`}
                           key={course.title}>
-                      <li>Описание</li>
+                      <li>Description</li>
                     </Link>
                     <Link to={`/courses/${course.title}/Overview/theory`}
                           key={course.theory}>
-                      <li>Общая информация курса</li>
+                      <li>General information</li>
                     </Link>
                     {course.chapters.map((chapter, index) => {return <div key={chapter.cName}>
-                      <li>Часть {index+1}: {this.renderChapter(chapter.cName)}
+                      <li>Chapter {index+1}: {this.renderChapter(chapter.cName)}
                         <ul className="chapter">
                           <Link to={`/courses/${course.title}/${chapter.cName}/lection`}>
-                            <li>Лекция</li>
+                            <li>Lection</li>
                           </Link>
                           <Link to={`/courses/${course.title}/${chapter.cName}/practice`}>
-                            <li>Практика</li>
+                            <li>Practice</li>
                           </Link>
                           <Link to={`/courses/${course.title}/${chapter.cName}/test`}>
-                            <li>Тесты</li>
+                            <li>Tests</li>
                           </Link>
                         </ul>
                       </li>
@@ -117,7 +117,7 @@ export default class Course extends Component {
                 <div id="content" className="courseInfo">
                   <div className="title">
                     {section || <div>
-                      <h2>Описание</h2>
+                      <h2>Description</h2>
                       <p className="description">{course.description}</p>
                     </div>}
                   </div>

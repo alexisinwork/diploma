@@ -7,16 +7,15 @@ class Reviews extends Component {
                 <div id="header-featured-reviews"></div>
                 <div id="banner-wrapper">
                     <div id="banner" className="container">
-                        <h2>Немного отзывов о нашем сервисе</h2>
-                        <span>Вы можете читать или оставлять отзывы о нашем сервисе</span>
+                        <h2>Reviews</h2>
+                        <span>You can read about this system some reviews</span>
                     </div>
                 </div>
 
                 <div id="wrapper">
                     <div id="page">
                         <div id="content" className="-left-margined">
-                            <p>Когда будут сделаны первые отзывы о нашем сервисе здесь вы сможете их увидеть<br />
-                              или оставить свой отзыв, который честно будет описывать нашу систему.</p>
+                            <p>When there will be available some reviews - we will show them here</p>
                         </div>
                     </div>
                 </div>

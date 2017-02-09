@@ -64,16 +64,16 @@ export default class Section extends Component {
       $(this).attr('disabled', 'disabled');
     });
     if (n < ch.length) {
-      alert('Результат: ' + window.result + ' из 5. Перейдите к следующей части, нажав на следующую лекцию!');
+      alert('Result: ' + window.result + ' of 1. Go to next chapter.');
     } else {
       if (window.total<5){
-        var bal = 'Курс не пройден.';
+        var bal = 'Course not passed.';
       } else if (window.total >= 5 && window.total <= 10) {
-        var bal = 'Курс пройден удовлетворительно.';
+        var bal = 'Course passed goodly.';
       } else {
-        var bal = 'Курс пройден на отлично.';
+        var bal = 'Course passed perfectly!';
       }
-      alert('Общий результат: ' + window.total + ' из ' + 5*ch.length + '. ' + bal);
+      alert('Whole result: ' + window.total + ' of ' + ch.length + '. ' + bal);
     }
   }
 
@@ -91,42 +91,42 @@ export default class Section extends Component {
     var ruC = '', ruS = '';
     switch (c){
       case 'Chapter1':
-        ruC = 'Часть 1';
+        ruC = 'Chapter 1';
         break;
       case 'Chapter2':
-        ruC = 'Часть 2';
+        ruC = 'Chapter 2';
         break;
       case 'Chapter3':
-        ruC = 'Часть 3';
+        ruC = 'Chapter 3';
         break;
       case 'Chapter4':
-        ruC = 'Часть 4';
+        ruC = 'Chapter 4';
         break;
       case 'Chapter5':
-        ruC = 'Часть 5';
+        ruC = 'Chapter 5';
         break;
       case 'Chapter6':
-        ruC = 'Часть 6';
+        ruC = 'Chapter 6';
         break;
       case 'Chapter7':
-        ruC = 'Часть 7';
+        ruC = 'Chapter 7';
         break;
       case 'Chapter8':
-        ruC = 'Часть 8';
+        ruC = 'Chapter 8';
         break;
       case 'Chapter9':
-        ruC = 'Часть 9';
+        ruC = 'Chapter 9';
         break;
     }
     switch (s){
       case 'lection':
-        ruS = 'Лекция';
+        ruS = 'Lection';
         break;
       case 'practice':
-        ruS = 'Практика';
+        ruS = 'Practice';
         break;
       case 'test':
-        ruS = 'Тесты';
+        ruS = 'Tests';
         break;
     }
     return ruC + ': ' + ruS
@@ -160,22 +160,21 @@ export default class Section extends Component {
       <div className="description" dangerouslySetInnerHTML={{__html: chapter[0][params.section]}} />
       <div id="answers">
         {this.state.isOpen && <span>
-          <p>Результати:</p>
+          <p>Results:</p>
           <textarea>
-            Навчився вкючати блок, ставити гучність динаміків, вивчив різні варіанти автовключення. Навчився видаляти та створювати профілі.
-            Вивчив спливаючі підказки блоків палітри 'Common'. Створив нову програму Eyes, в якій на екрані NXT будуть зображені очі, що дивляться наліво-направо.
+            Understand something important here.
           </textarea>
-          <p>Висновки:</p>
+          <p>Outcome:</p>
           <textarea>
-            Система NXT легка у користуванні та ефективна для рішення задач по робототехніці.
+            Great.
           </textarea>
         </span>}
       </div>
       {<a href="#" className="button pull-right"
-          onClick={this.nextSection.bind(this, params.section, course.chapters, nextCourseName, chapter)}>{params.section !== 'test' ? 'Дальше' : 'Показать результат'}</a>
+          onClick={this.nextSection.bind(this, params.section, course.chapters, nextCourseName, chapter)}>{params.section !== 'test' ? 'Next' : 'Show result'}</a>
       }
       {params.section === 'practice' &&
-      <a href="#" className="button pull-right -right-margined" onClick={this.checkAnswer.bind(this)}>Проверить</a>}
+      <a href="#" className="button pull-right -right-margined" onClick={this.checkAnswer.bind(this)}>Check</a>}
     </div>)
   }
 }
