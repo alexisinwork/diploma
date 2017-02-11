@@ -6,7 +6,7 @@ App created with pretty legacy React 0.14.3, but no significant changes from Rea
 
 ## Screenshot
 
-![alt-tag](Home.jpg)
+![alt-tag](screenshot.png)
 
 ## In use:
 
